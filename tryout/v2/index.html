@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>שירה רווח — אסטרטגית סושיאל</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <!-- Scroll-driven golden ambient glow -->
+  <div class="bg-flare" id="bg-flare" aria-hidden="true">
+    <div class="bg-flare__rays"></div>
+    <div class="bg-flare__glow"></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <span class="nav__logo">שירה רווח</span>
+      <nav class="nav__links">
+        <a href="#about">אודות</a>
+        <a href="#programs">מסלולים</a>
+        <a href="#why">למה אני</a>
+        <a href="#form">צרי קשר</a>
+      </nav>
+      <a href="#form" class="nav__cta magnetic">להצטרף לסדנה</a>
+      <button class="nav__burger" id="nav-burger" aria-label="פתיחת תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" id="nav-mobile">
+      <a href="#about">אודות</a>
+      <a href="#programs">מסלולים</a>
+      <a href="#why">למה אני</a>
+      <a href="#form">צרי קשר</a>
+      <a href="#form" class="nav__mobile-cta">להצטרף לסדנה</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="blob"></canvas>
+    <div class="hero__fade"></div>
+    <div class="lens-flare" id="lens-flare" aria-hidden="true">
+      <div class="lens-flare__streak"></div>
+      <div class="lens-flare__rays"></div>
+      <div class="lens-flare__halo"></div>
+      <div class="lens-flare__core"></div>
+      <div class="lens-flare__ghost lens-flare__ghost--1"></div>
+      <div class="lens-flare__ghost lens-flare__ghost--2"></div>
+      <div class="lens-flare__ghost lens-flare__ghost--3"></div>
+    </div>
+    <!-- To add the real photo later: set src="your-photo.jpg" on #hero-photo
+         and delete the .hero__portrait-fallback div below it. -->
+    <div class="hero__portrait">
+      <img id="hero-photo" alt="שירה רווח" />
+      <div class="hero__portrait-fallback">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path stroke-linecap="round" d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        <span>התמונה שלך תופיע כאן</span>
+      </div>
+    </div>
+    <div class="hero__content">
+      <span class="hero__eyebrow reveal-eyebrow">
+        <span class="eyebrow__line"></span>
+        Social Strategist
+      </span>
+      <h1 class="hero__title">
+        <span class="title-line" data-text="נעים להכיר,">נעים להכיר,</span>
+        <span class="title-line title-line--gold" data-text="אני שירה רווח">אני <em>שירה רווח</em></span>
+      </h1>
+      <p class="hero__sub reveal-sub">אסטרטגית סושיאל, יוצרת תוכן ומנהלת עמודים עסקיים</p>
+      <a href="#form" class="hero__cta magnetic reveal-cta">
+        <span>רוצה לשמוע איזה מסלול מתאים לך?</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+      </a>
+    </div>
+    <div class="hero__scroll reveal-scroll">
+      <span>גלול</span>
+      <svg class="hero__scroll-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v15m0 0l-6-6m6 6l6-6"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="ticker-track">
+      <span class="ticker__unit">
+        <span>אסטרטגיה</span><span class="sep">✦</span>
+        <span>ניהול תוכן</span><span class="sep">✦</span>
+        <span>מיתוג</span><span class="sep">✦</span>
+        <span>חשיפה אורגנית</span><span class="sep">✦</span>
+        <span>רשתות חברתיות</span><span class="sep">✦</span>
+        <span>צמיחה עסקית</span><span class="sep">✦</span>
+        <span>יצירת תוכן</span><span class="sep">✦</span>
+        <span>קמפיינים</span><span class="sep">✦</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="gold-icon gold-icon--float about__gold-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+    </div>
+    <div class="about__label">/ 01 ABOUT</div>
+    <div class="about__inner">
+      <blockquote class="about__quote">
+        "בשנים האחרונות ליוויתי עשרות בעלי עסקים, בניתי אסטרטגיות תוכן, הפקתי ימי צילום, יצרתי קמפיינים והובלתי מותגים לצמיחה משמעותית ברשתות החברתיות."
+      </blockquote>
+      <div class="about__aside">
+        <div class="about__rule"></div>
+        <p class="about__body">היום אני מרכזת את כל הידע, הניסיון והשיטות שעובדות באמת לסדנה פרקטית שנותנת לך כלים ליישום מיידי.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="programs section" id="programs">
+    <div class="programs__head">
+      <span class="section-label">/ 02 PROGRAMS</span>
+      <h2 class="section-title">המסלולים שלי</h2>
+    </div>
+    <div class="programs__grid">
+
+      <div class="prog-card magnetic-card">
+        <div class="card__shine"></div>
+        <div class="card__num">01</div>
+        <div class="card__content">
+          <span class="card__meta">מפגש אישי 1:1 | 4 שעות</span>
+          <h3 class="card__title">סדנת אינסטגרם<br/>לבעלות עסקים</h3>
+          <p class="card__desc">הסדנה מיועדת לבעלות עסקים שרוצות לקחת את האינסטגרם שלהן לרמה הבאה, להבין מה עובד באמת ולהתחיל לייצר תוכן שמביא חשיפה, אמון ולקוחות.</p>
+
+          <p class="card__group-title">מה נעשה בסדנה?</p>
+
+          <p class="card__group-title card__group-title--sub">אבחון מלא לעמוד האינסטגרם</p>
+          <ul class="card__list">
+            <li>✔ מעבר יסודי על העמוד</li>
+            <li>✔ זיהוי נקודות לשיפור</li>
+            <li>✔ חידוד המסרים השיווקיים</li>
+            <li>✔ דיוק קהל היעד</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">בניית אסטרטגיה מותאמת אישית</p>
+          <ul class="card__list">
+            <li>✔ מה לפרסם</li>
+            <li>✔ איך לבנות תוכן שמחבר לקהל</li>
+            <li>✔ סוגי תוכן שחייבים להיות בעמוד</li>
+            <li>✔ תוכנית תוכן מותאמת לעסק</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">צילום תוכן</p>
+          <ul class="card__list">
+            <li>✔ צילום נכון מהטלפון</li>
+            <li>✔ תאורה וזוויות צילום</li>
+            <li>✔ צילום מוצרים ושירותים</li>
+            <li>✔ יצירת תוכן שנראה מקצועי</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">עריכה</p>
+          <ul class="card__list">
+            <li>✔ עבודה נכונה ב-CapCut</li>
+            <li>✔ כתוביות</li>
+            <li>✔ מעברים</li>
+            <li>✔ עריכה מהירה ויעילה</li>
+          </ul>
+
+          <p class="card__group-title">בסיום הסדנה תקבלי:</p>
+          <ul class="card__list">
+            <li>✓ תוכנית עבודה מסודרת</li>
+            <li>✓ אסטרטגיה מותאמת לעסק שלך</li>
+            <li>✓ כלים לצילום ועריכה</li>
+            <li>✓ ביטחון ליצור תוכן בעצמך</li>
+          </ul>
+
+          <a href="#form" class="card__cta magnetic">אני רוצה לשמוע עוד
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="prog-card magnetic-card">
+        <div class="card__shine"></div>
+        <div class="card__num">02</div>
+        <div class="card__content">
+          <span class="card__meta">2 מפגשים | 7 שעות | כולל 3 חודשי ליווי</span>
+          <h3 class="card__title">הכשרה לצלמות<br/>סושיאל</h3>
+          <p class="card__desc">המסלול מיועד למי שרוצה להפוך את אהבתה לצילום ולעולם התוכן למקצוע מבוקש ורווחי. בין אם את בתחילת הדרך ובין אם כבר צילמת בעבר – תלמדי איך לעבוד נכון עם עסקים ולהפוך לצלמת סושיאל מקצועית.</p>
+
+          <p class="card__group-title">מה נלמד?</p>
+
+          <p class="card__group-title card__group-title--sub">יסודות צילום לסושיאל</p>
+          <ul class="card__list">
+            <li>✔ בניית קומפוזיציה נכונה</li>
+            <li>✔ עבודה עם תאורה טבעית ומלאכותית</li>
+            <li>✔ צילום אנשים, מוצרים ועסקים</li>
+            <li>✔ זוויות צילום שמייצרות תוכן איכותי</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">צילום יום תוכן</p>
+          <ul class="card__list">
+            <li>✔ איך מתכננים יום צילום</li>
+            <li>✔ יצירת מגוון חומרים ביום אחד</li>
+            <li>✔ בניית שוט ליסט</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">עריכת סרטונים</p>
+          <ul class="card__list">
+            <li>✔ CapCut בצורה מקצועית</li>
+            <li>✔ כתוביות</li>
+            <li>✔ טרנדים</li>
+            <li>✔ יצירת רילסים שעוצרים את הגלילה</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">עבודה מול לקוחות</p>
+          <ul class="card__list">
+            <li>✔ איך לגשת ללקוחות ראשונים</li>
+            <li>✔ תמחור נכון</li>
+            <li>✔ בניית תיק עבודות</li>
+            <li>✔ ניהול תהליך מול לקוח</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">בניית עסק בתחום</p>
+          <ul class="card__list">
+            <li>✔ איך למצוא לקוחות</li>
+            <li>✔ שיווק עצמי באינסטגרם</li>
+            <li>✔ יצירת הצעות ערך</li>
+            <li>✔ הגדלת הכנסה בתחום</li>
+          </ul>
+
+          <p class="card__group-title">תקבלי גם:</p>
+          <ul class="card__list">
+            <li>✓ ליווי אישי למשך 3 חודשים</li>
+            <li>✓ מענה על שאלות</li>
+            <li>✓ הכוונה בתהליכים הראשונים</li>
+            <li>✓ כלים מעשיים ליציאה לשטח</li>
+          </ul>
+
+          <a href="#form" class="card__cta magnetic">אני רוצה לשמוע עוד
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="prog-card magnetic-card">
+        <div class="card__shine"></div>
+        <div class="card__num">03</div>
+        <div class="card__content">
+          <span class="card__meta">4 מפגשים | 12 שעות</span>
+          <h3 class="card__title">קורס ניהול סושיאל<br/>מקצועי</h3>
+          <p class="card__desc">המסלול המקיף ביותר למי שרוצה ללמוד לנהל עמודים עסקיים, לבנות אסטרטגיות, ליצור תוכן ולהציע שירותי סושיאל מקצועיים לעסקים.</p>
+
+          <p class="card__group-title card__group-title--sub">מפגש 1 — אסטרטגיה ושיווק</p>
+          <ul class="card__list">
+            <li>✔ הבנת תפקיד מנהלת הסושיאל</li>
+            <li>✔ אפיון עסק וקהל יעד</li>
+            <li>✔ בניית אסטרטגיה שנתית וחודשית</li>
+            <li>✔ בידול ומיתוג</li>
+            <li>✔ יצירת שפה שיווקית</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">מפגש 2 — יצירת תוכן מקצועית</p>
+          <ul class="card__list">
+            <li>✔ סוגי תוכן שונים</li>
+            <li>✔ בניית סדרות תוכן</li>
+            <li>✔ תוכן שמייצר מעורבות</li>
+            <li>✔ תוכן שמוכר</li>
+            <li>✔ בניית לוח תוכן</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">מפגש 3 — צילום ועריכה</p>
+          <ul class="card__list">
+            <li>✔ צילום מקצועי מהטלפון</li>
+            <li>✔ עבודה עם תאורה</li>
+            <li>✔ צילום לקוחות ועסקים</li>
+            <li>✔ צילום מוצרים</li>
+            <li>✔ עריכת סרטונים ב-CapCut</li>
+            <li>✔ כתוביות</li>
+            <li>✔ אפקטים</li>
+            <li>✔ עריכה מהירה</li>
+          </ul>
+
+          <p class="card__group-title card__group-title--sub">מפגש 4 — עבודה כמנהלת סושיאל</p>
+          <ul class="card__list">
+            <li>✔ תמחור שירותים</li>
+            <li>✔ בניית חבילות</li>
+            <li>✔ ניהול לקוחות</li>
+            <li>✔ חוזים ותהליכי עבודה</li>
+            <li>✔ הגשת תוכנית חודשית</li>
+            <li>✔ איך להשיג לקוחות חדשים</li>
+            <li>✔ איך לבנות סמכות מקצועית</li>
+            <li>✔ איך להפוך את הסושיאל למקור הכנסה יציב</li>
+          </ul>
+
+          <a href="#form" class="card__cta magnetic">אני רוצה לשמוע עוד
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why section" id="why">
+    <div class="gold-icon gold-icon--float why__gold-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.6 2.6 2.4 4.2 5 4.5v3.1c-1.8 0-3.5-.5-5-1.5v6.4a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v3.2a2.4 2.4 0 1 0 1.6 2.2V3h3z"/></svg>
+    </div>
+    <div class="why__inner">
+      <span class="section-label">/ 03 WHY ME</span>
+      <h2 class="section-title">למה ללמוד איתי?</h2>
+      <div class="why__line"></div>
+      <blockquote class="why__quote">
+        אני חיה ונושמת סושיאל ביום-יום. מנהלת ומלווה עסקים, מפיקה ימי צילום, בונה אסטרטגיות תוכן ומייצרת תוכן לעשרות מותגים ועסקים.
+        <br/><br/>
+        המטרה שלי — לא לימוד תיאוריה, אלא כלים מעשיים שתוכלי ליישם מיד.
+      </blockquote>
+      <div class="why__stats">
+        <div class="why__stat">
+          <span class="stat__num" data-count="50">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">עסקים בליווי</span>
+        </div>
+        <div class="why__stat">
+          <span class="stat__num" data-count="3">0</span>
+          <span class="stat__label">מסלולים מותאמים</span>
+        </div>
+        <div class="why__stat">
+          <span class="stat__num" data-count="100">0</span><span class="stat__plus">%</span>
+          <span class="stat__label">כלים מעשיים</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section section" id="form">
+    <div class="gold-icon gold-icon--float form__gold-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.2-.5-2.4-1.5-3.2-2.7-.1-.2-.1-.4.1-.5.2-.2.4-.4.6-.6.1-.2.1-.4 0-.5-.1-.2-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-.1 2.5 1 1.6 2.3 3 4 3.8.6.3 1.1.5 1.5.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+    </div>
+    <div class="form-inner">
+      <span class="section-label">/ 04 JOIN</span>
+      <h2 class="section-title">רוצה לשמוע איזה<br/>מסלול מתאים לך?</h2>
+      <p class="form-sub">השאירי פרטים ואחזור אלייך.</p>
+      <form class="form-wrap" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <div class="field">
+          <label for="name">שם מלא</label>
+          <input id="name" name="name" type="text" placeholder="שם מלא" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="phone">טלפון</label>
+          <input id="phone" name="phone" type="tel" placeholder="טלפון" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="business">שם העסק <span class="opt">(אם יש)</span></label>
+          <input id="business" name="business" type="text" placeholder="שם העסק" />
+        </div>
+        <button id="submit-btn" type="button" class="submit-btn magnetic">
+          <span id="submit-label">אני רוצה להצטרף לסדנה</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+        </button>
+        <p class="form-success" id="form-success" hidden>תודה! אחזור אלייך בהקדם.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer__name">שירה רווח</span>
+    <div class="gold-icon gold-icon--sm" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+    </div>
+    <button class="footer__top" id="back-top" aria-label="חזרה למעלה">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"/></svg>
+      למעלה
+    </button>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

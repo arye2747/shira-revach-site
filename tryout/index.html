@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שירה רווח — בחרי סגנון</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;700;900&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Heebo',sans-serif;background:#0C0A08;color:#FAF3E8;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;-webkit-font-smoothing:antialiased}
+.title{font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;text-align:center;margin-bottom:.4rem}
+.sub{color:rgba(250,243,232,.38);text-align:center;margin-bottom:3rem;font-size:.9rem;letter-spacing:.04em}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:860px;width:100%}
+.card{display:block;text-decoration:none;border:1px solid rgba(196,152,90,.18);border-radius:6px;overflow:hidden;cursor:pointer;transition:border-color .35s,transform .35s}
+.card:hover{border-color:rgba(196,152,90,.7);transform:translateY(-6px)}
+.preview{height:240px;display:flex;align-items:center;justify-content:center;font-family:'Frank Ruhl Libre',serif;font-size:clamp(3rem,7vw,5rem);font-weight:900;letter-spacing:-.04em;overflow:hidden;position:relative}
+.card--dark .preview{background:#0C0A08;color:#C4985A}
+.card--dark .preview::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 60%,rgba(196,152,90,.12),transparent)}
+.card--bright .preview{background:linear-gradient(135deg,#FFF0EB 0%,#F0ECFF 50%,#FFF8EB 100%);color:#E8654A}
+.info{padding:1.3rem 1.6rem}
+.card--dark .info{background:#161210}
+.card--bright .info{background:#F6F1EC}
+.name{font-family:'Frank Ruhl Libre',serif;font-size:1.15rem;font-weight:700;margin-bottom:.3rem}
+.card--dark .name{color:#FAF3E8}
+.card--bright .name{color:#1A1A1A}
+.desc{font-size:.78rem;font-weight:300;letter-spacing:.02em}
+.card--dark .desc{color:rgba(250,243,232,.38)}
+.card--bright .desc{color:rgba(26,26,26,.45)}
+.badge{display:inline-block;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem;border-radius:2px;margin-bottom:.7rem}
+.card--dark .badge{background:rgba(196,152,90,.12);color:#C4985A;border:1px solid rgba(196,152,90,.2)}
+.card--bright .badge{background:rgba(232,101,74,.1);color:#E8654A;border:1px solid rgba(232,101,74,.2)}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.preview{height:180px}}
+</style>
+</head>
+<body>
+<p class="title">בחרי את הסגנון שלך</p>
+<p class="sub">שתי גרסאות שונות לחלוטין — לחצי לצפייה מלאה</p>
+<div class="grid">
+  <a href="v1/" class="card card--dark">
+    <div class="preview">שירה</div>
+    <div class="info">
+      <span class="badge">Style A</span>
+      <p class="name">כהה ועוצמתי — Studio</p>
+      <p class="desc">עיצוב אפל עם אנימציית תלת ממד, אפקטי גלילה עמוקים ואסתטיקה של סטודיו מקצועי</p>
+    </div>
+  </a>
+  <a href="v2/" class="card card--bright">
+    <div class="preview">שירה</div>
+    <div class="info">
+      <span class="badge">Style B</span>
+      <p class="name">בהיר ואנרגטי — Social</p>
+      <p class="desc">עיצוב צבעוני ודינמי עם כרטיסיות מרחפות, גרדיאנטים ותנועה חיה — Instagram vibes</p>
+    </div>
+  </a>
+</div>
+</body>
+</html>
