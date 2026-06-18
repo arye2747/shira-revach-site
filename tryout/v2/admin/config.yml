@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: "en"
+
+media_folder: "tryout/v2/uploads"
+public_folder: "/tryout/v2/uploads"
+
+collections:
+  - name: "page"
+    label: "תוכן העמוד"
+    files:
+      - name: "home"
+        label: "עמוד הבית"
+        file: "tryout/v2/content.json"
+        fields:
+          - { name: "heroTitle1", label: "כותרת ראשית — שורה 1", widget: "string" }
+          - { name: "heroTitle2", label: "כותרת ראשית — שורה 2", widget: "string" }
+          - { name: "heroSub", label: "תת-כותרת בהירו", widget: "string" }
+          - { name: "heroPhoto", label: "תמונה ראשית (הירו)", widget: "image", required: false, choose_url: false }
+
+          - { name: "aboutQuote", label: "אודות — ציטוט", widget: "text" }
+          - { name: "aboutBody", label: "אודות — טקסט", widget: "text" }
+
+          - { name: "card1Title", label: "מסלול 1 — כותרת", widget: "string" }
+          - { name: "card1Meta", label: "מסלול 1 — פרטי משך/מסגרת", widget: "string" }
+          - { name: "card1Body", label: "מסלול 1 — תוכן מלא", widget: "text" }
+
+          - { name: "card2Title", label: "מסלול 2 — כותרת", widget: "string" }
+          - { name: "card2Meta", label: "מסלול 2 — פרטי משך/מסגרת", widget: "string" }
+          - { name: "card2Body", label: "מסלול 2 — תוכן מלא", widget: "text" }
+
+          - { name: "card3Title", label: "מסלול 3 — כותרת", widget: "string" }
+          - { name: "card3Meta", label: "מסלול 3 — פרטי משך/מסגרת", widget: "string" }
+          - { name: "card3Body", label: "מסלול 3 — תוכן מלא", widget: "text" }
+
+          - { name: "whyQuote", label: "למה אני — טקסט", widget: "text" }
+          - { name: "whyStat1Num", label: "סטטיסטיקה 1 — מספר", widget: "string" }
+          - { name: "whyStat1Label", label: "סטטיסטיקה 1 — תווית", widget: "string" }
+          - { name: "whyStat2Num", label: "סטטיסטיקה 2 — מספר", widget: "string" }
+          - { name: "whyStat2Label", label: "סטטיסטיקה 2 — תווית", widget: "string" }
+          - { name: "whyStat3Num", label: "סטטיסטיקה 3 — מספר", widget: "string" }
+          - { name: "whyStat3Label", label: "סטטיסטיקה 3 — תווית", widget: "string" }
+
+          - { name: "formSub", label: "טופס — שורת פתיחה", widget: "string" }
+          - { name: "footerName", label: "שם בפוטר", widget: "string" }
