@@ -503,14 +503,15 @@ document.getElementById('submit-btn')?.addEventListener('click', () => {
   btn.disabled = true;
   label.textContent = 'שולחת…';
 
+  const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzDbyhBSBZzrKcm8z-Z3y3vD7dGJNgi07DOqXgkZAsYy8enSy8wtG8ydSmwp0J5OKuu/exec';
+
   const formData = new URLSearchParams({
-    'form-name': 'contact',
     name:     nameEl.value.trim(),
     phone:    phoneEl.value.trim(),
     business: document.getElementById('business')?.value.trim() || '',
   });
 
-  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: formData.toString() })
+  fetch(SHEETS_ENDPOINT, { method: 'POST', body: formData })
     .then(() => {
       btn.style.display = 'none';
       success.hidden = false;
